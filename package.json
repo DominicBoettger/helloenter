@@ -1,0 +1,21 @@
+{
+  "name": "helloenter",
+  "private": true,
+  "version": "0.0.1",
+  "description": "Stencil App Starter",
+  "scripts": {
+    "build": "stencil build",
+    "start": "stencil build --dev --watch --serve",
+    "test": "stencil test --spec --e2e",
+    "test.watch": "stencil test --spec --e2e --watchAll",
+    "browserstack": "node ./node_modules/webdriverio/bin/wdio wdio.conf",
+    "browserstacknopre": "node ./node_modules/webdriverio/bin/wdio wdio.conf --baseUrl http://localhost:3333",
+    "prerender": "Prerenderer -s ./www -o ./output -i ./src/assets/prerender.js -u http://localhost:5000/urls.json -b / -r 3 -m https://stencil-router-starter1.com"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@inspirationlabs/router": "1.0.0-4",
+    "@stencil/core": "1.0.6",
+    "workbox-build": "4.3.1"
+  }
+}
